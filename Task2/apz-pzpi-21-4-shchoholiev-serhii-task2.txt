@@ -53,8 +53,7 @@ ER-модель містить такі сутності:
 Для забезпечення високої якості коду, серверна частина використовую інтеграційні тести. Інтеграційні тести перевіряють взаємодію між різними модулями та компонентами системи, включаючи взаємодію з базою даних та зовнішніми сервісами. Вони допомагають виявити помилки, що можуть виникнути в процесі взаємодії різних частин системи, які не завжди можна виявити за допомогою одиничних тестів. Тести також забезпечують перевірку відповідності системи її технічним вимогам та специфікаціям. Проєкт має 83 інтеграційні тести (див. рис. 7).
 
 Ресурс	Метод	Посилання	Опис
-Користувачі
-«Users»	GET	/users/{id}	Повертає користувача
+Користувачі «Users»	GET	/users/{id}	Повертає користувача
 		/users	Повертає список користувачів
 	POST	/users/register	Реєстрація користувача
 		/users/login	Вхід у систему
@@ -64,10 +63,8 @@ roles/{roleName}	Додавання ролі користувачу
 		/users	Оновлення поточного користувача
 	DELETE	/users/{userId}/
 roles/{roleName}	Видалення роль користувача
-Токени
-«Tokens»	POST	/tokens/refresh	Оновлення «Access Token» користувача
-Групи
-«Groups»	GET	/groups/{groupId}	Повертає групу
+Токени «Tokens»	POST	/tokens/refresh	Оновлення «Access Token» користувача
+Групи «Groups»	GET	/groups/{groupId}	Повертає групу
 		/groups/{groupId}/users	Повертає всіх користувачів групи
 	POST	/groups	Створення групи
 		/groups/{groupId}/
@@ -76,27 +73,21 @@ users/{userId}	Додавання користувача до групи
 	DELETE	/groups/{groupId}/users	Видалення поточного користувача з групи
 		/groups/{groupId}/
 users/{userId}	Видалення користувача з групи
-Пристрої
-«Devices»	GET	/devices	Повертає список пристроїв
+Пристрої «Devices»	GET	/devices	Повертає список пристроїв
 		/devices/{deviceId}	Повертає пристрій
 	POST	/devices	Створення пристрою
 	PUT	/devices/{deviceId}	Оновлення пристрою
 	PATCH	/devices/{deviceId}/status	Активація / деактивація пристрою
-Рецепти
-«Recipes»	GET	/recipes	Повертає список полиць
+Рецепти «Recipes»	GET	/recipes	Повертає список полиць
 		/recipes/{recipeId}	Повертає рецепт
 	POST	/recipes/{recipeId}	Створення предмету
 	PUT	/recipes/{recipeId}	Оновлення полиці
 	PATCH	/recipes/{recipeId}/cook	Приготування рецепту
 	DELETE	/recipes/{recipeId}	Видалення рецепту
-Розпізнавачі продуктів
-«Products
-Recognizers»	POST	/products-recognizers/ {deviceGuid} /products/identify-by-image	Розпізнає продукт на зображенні та оновлює кількість або додає новий продукт
-Категорії
-«Categories»	GET	/categories	Повертає список категорій
+Пристрої розпізнавання продуктів «Products Recognizers»	POST	/products-recognizers/ {deviceGuid} /products/identify-by-image	Розпізнає продукт на зображенні та оновлює кількість або додає новий продукт
+Категорії «Categories»	GET	/categories	Повертає список категорій
 	POST	/categories	Створення категорії
-Продукти
-«Products»	GET	/products	Повертає список продуктів у группі
+Продукти «Products»	GET	/products	Повертає список продуктів у группі
 	POST	/products	Створення продукту
 	PATCH	/products/{productId} /count	Оновлення кількості продукту
 
